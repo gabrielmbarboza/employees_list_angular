@@ -1,8 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
     selector: 'employee-list',
-    template: `<h1>TESTE LISTA DE EMPREGADOS!!!</h1>`
+    templateUrl: './employee-list.component.html',
 })
-export class EmployeeListComponent { 
+export class EmployeeListComponent implements OnInit {
+    employees = this.employeeService.getEmployees();
+
+    constructor(private employeeService: EmployeeService) {
+    }
+
+    ngOnInit() {
+        //this.employees = this.employeeService.getEmployees();
+    }
 }
