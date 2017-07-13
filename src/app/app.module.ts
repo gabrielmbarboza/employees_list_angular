@@ -3,18 +3,21 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { EmployeeService } from './employee.service';
+import { EmployeeService } from './employee/employee.service';
+import { PositionTypeService } from './position-type/position-type.service';
 import { MenuNavComponent } from './menu-nav/menu-nav.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { PositionTypeComponent } from './position-type/position-type.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent,
     MenuNavComponent,
-    HomeComponent
+    HomeComponent,
+    PositionTypeComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,10 @@ import { HomeComponent } from './home/home.component';
     JsonpModule,
     routing
   ],
-  providers: [EmployeeService],
+  providers: [
+    EmployeeService,
+    PositionTypeService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
