@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeService } from './employee.service';
 import { MenuNavComponent } from './menu-nav/menu-nav.component';
+import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    MenuNavComponent
+    MenuNavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    routing
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
