@@ -1,4 +1,10 @@
 <h1>Employees: </h1>
 <ul>
-    <li *ngFor="let employee of employees"><i class="medium material-icons" style="display: inline-flex; vertical-align: middle">perm_identity</i>{{employee.first_name}} {{employee.last_name}} ({{employee.nickname}})</li>
+    <li *ngFor="let employee of employees">
+        <i class="medium material-icons" style="display: inline-flex; vertical-align: middle">perm_identity</i>
+        <span>{{employee.first_name}} {{employee.last_name}} ({{employee.nickname}})</span>
+        <i class="tiny material-icons">edit</i>
+        <i class="tiny material-icons">delete</i>
+    </li>
 <ul>
+<a class="btn-floating btn-large waves-effect waves-light blue darken-2" style="float:right;vertical-align:bottom"><i class="material-icons">add</i></a>
