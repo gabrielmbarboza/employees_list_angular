@@ -15,4 +15,9 @@ export class EmployeeService {
         return this.http.get(this.employeesUrl)
                         .map((res:Response) => res.json().data);
     }
+
+    getEmployee(id: number): Observable<Employee> {
+        return this.http.get(this.employeesUrl + '/' + id)
+                        .map((res:Response) => res.json());
+    }
 }

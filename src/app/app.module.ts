@@ -10,6 +10,10 @@ import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { PositionTypeComponent } from './position-type/position-type.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeShowComponent } from './employee-show/employee-show.component';
+import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
+import { EmployeeAddComponent } from './employee-add/employee-add.component';
+import { EmployeeAddFormComponent } from './employee-add-form/employee-add-form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { EmployeeComponent } from './employee/employee.component';
     MenuNavComponent,
     HomeComponent,
     PositionTypeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    EmployeeShowComponent,
+    EmployeeEditComponent,
+    EmployeeAddComponent,
+    EmployeeAddFormComponent
   ],
   imports: [
     BrowserModule,
