@@ -5,10 +5,10 @@ import { Employee } from '../employee';
 
 @Component({
   selector: 'app-employee',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  templateUrl: './employee-list.component.html',
+  styleUrls: ['./employee-list.component.css']
 })
-export class EmployeeComponent implements OnInit {
+export class EmployeeListComponent implements OnInit {
   errorMessage: string;
   employees: Employee[];
   mode: 'Observable';

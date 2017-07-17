@@ -8,30 +8,22 @@ import { PositionTypeService } from './position-type/position-type.service';
 import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { PositionTypeComponent } from './position-type/position-type.component';
-import { EmployeeComponent } from './employee/list/list.component';
-import { ShowComponent } from './employee/show/show.component';
-import { EmployeeEditComponent } from './employee/edit/edit.component';
-import { AddComponent } from './employee/add/add.component';
-
+import { EmployeeModule } from './employee/employee.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PositionTypeComponent,
-    EmployeeComponent,
-    ShowComponent,
-    EmployeeEditComponent,
-    AddComponent,
+    PositionTypeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EmployeeModule
   ],
   providers: [
-    EmployeeService,
     PositionTypeService
     ],
   bootstrap: [AppComponent]

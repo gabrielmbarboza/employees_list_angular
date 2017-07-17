@@ -7,10 +7,10 @@ import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'employee-show',
-  templateUrl: './show.component.html',
-  styleUrls: ['./show.component.css']
+  templateUrl: './employee-show.component.html',
+  styleUrls: ['./employee-show.component.css']
 })
-export class ShowComponent implements OnInit {
+export class EmployeeShowComponent implements OnInit {
   employee: Employee;
   errorMessage: string;
   mode: 'Observable';
