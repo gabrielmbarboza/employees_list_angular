@@ -5,33 +5,30 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { EmployeeService } from './employee/employee.service';
 import { PositionTypeService } from './position-type/position-type.service';
-import { MenuNavComponent } from './menu-nav/menu-nav.component';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 import { HomeComponent } from './home/home.component';
 import { PositionTypeComponent } from './position-type/position-type.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { EmployeeShowComponent } from './employee-show/employee-show.component';
-import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
-import { EmployeeAddComponent } from './employee-add/employee-add.component';
-import { EmployeeAddFormComponent } from './employee-add-form/employee-add-form.component';
+import { EmployeeComponent } from './employee/list/list.component';
+import { ShowComponent } from './employee/show/show.component';
+import { EmployeeEditComponent } from './employee/edit/edit.component';
+import { AddComponent } from './employee/add/add.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuNavComponent,
     HomeComponent,
     PositionTypeComponent,
     EmployeeComponent,
-    EmployeeShowComponent,
+    ShowComponent,
     EmployeeEditComponent,
-    EmployeeAddComponent,
-    EmployeeAddFormComponent
+    AddComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     JsonpModule,
-    routing
+    AppRoutingModule
   ],
   providers: [
     EmployeeService,
