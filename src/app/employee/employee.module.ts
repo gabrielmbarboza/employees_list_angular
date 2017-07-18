@@ -1,6 +1,5 @@
 import { NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 import { EmployeeService } from './employee.service';
 
@@ -9,10 +8,12 @@ import { EmployeeShowComponent } from './employee-show/employee-show.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeAddComponent } from './employee-add/employee-add.component';
 
+import { EmployeeRoutingModule } from './employee.routing.module';
+
 @NgModule({
     imports:[
       CommonModule,
-      RouterModule
+      EmployeeRoutingModule
     ],
     exports:[],
     declarations:[
